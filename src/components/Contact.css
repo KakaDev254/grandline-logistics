@@ -1,0 +1,157 @@
+.contact {
+  padding: 80px 0;
+  background: #f8fafc;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.contact-info h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0b2b4a;
+  margin-bottom: 16px;
+}
+
+.contact-info p {
+  color: #475569;
+  margin-bottom: 24px;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.contact-detail i {
+  font-size: 1.3rem;
+  color: #d97706;
+  width: 24px;
+}
+
+.contact-detail span {
+  font-weight: 500;
+  color: #0b2b4a;
+}
+
+.social-links {
+  margin-top: 24px;
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a {
+  color: #0b2b4a;
+  font-size: 1.6rem;
+  transition: color 0.2s;
+}
+
+.social-links a:hover {
+  color: #d97706;
+}
+
+.social-handles {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.social-handles i {
+  margin-right: 4px;
+  margin-left: 8px;
+}
+
+.social-handles i:first-child {
+  margin-left: 0;
+}
+
+.quote-form {
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+}
+
+.quote-form h3 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #0b2b4a;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #0b2b4a;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #d97706;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1);
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.btn-submit {
+  background: #0b2b4a;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 60px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+.btn-submit:hover {
+  background: #1a3f5e;
+}
+
+.quote-phone {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: #64748b;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 0;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .quote-form {
+    padding: 24px;
+  }
+}

@@ -1,0 +1,40 @@
+.cta-banner {
+  padding: 60px 0;
+  background: #0b2b4a;
+  color: white;
+  text-align: center;
+}
+
+.cta-banner h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+
+.cta-banner p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin-bottom: 28px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-banner .btn-primary {
+  background: #d97706;
+}
+
+.cta-banner .btn-primary:hover {
+  background: #f59e0b;
+}
+
+@media (max-width: 768px) {
+  .cta-banner {
+    padding: 40px 0;
+  }
+  
+  .cta-banner h2 {
+    font-size: 1.8rem;
+  }
+}
