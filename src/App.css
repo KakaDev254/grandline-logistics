@@ -1,3 +1,13 @@
+:root {
+  --primary-dark: #0a1a2b;
+  --primary-blue: #1a3a5c;
+  --accent-gold: #d4a843;
+  --accent-gold-hover: #c9a94e;
+  --text-light: #ffffff;
+  --text-dark: #1a1a2e;
+  --bg-light: #f4f6f9;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -8,7 +18,7 @@
   font-size: 2.4rem;
   font-weight: 700;
   letter-spacing: -1px;
-  color: #0b2b4a;
+  color: var(--primary-dark);
   margin-bottom: 12px;
 }
 
@@ -33,52 +43,75 @@
 
 .btn-primary {
   display: inline-block;
-  background: #d97706;
-  color: white;
-  font-weight: 600;
+  background: var(--accent-gold);
+  color: var(--text-dark);
+  font-weight: 700;
   padding: 14px 36px;
   border-radius: 60px;
   text-decoration: none;
   font-size: 1rem;
-  transition: background 0.2s;
+  transition: all 0.3s ease;
   border: none;
   cursor: pointer;
 }
 
 .btn-primary:hover {
-  background: #b85e00;
+  background: var(--accent-gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 168, 67, 0.3);
 }
 
 .btn-outline {
   display: inline-block;
   background: transparent;
-  color: #0b2b4a;
+  color: var(--text-light);
   font-weight: 600;
   padding: 14px 36px;
   border-radius: 60px;
   text-decoration: none;
   font-size: 1rem;
-  border: 1.5px solid #cbd5e1;
-  transition: all 0.2s;
+  border: 2px solid var(--text-light);
+  transition: all 0.3s ease;
   margin-left: 12px;
 }
 
 .btn-outline:hover {
-  border-color: #0b2b4a;
-  background: #f1f5f9;
+  background: var(--text-light);
+  color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: var(--primary-blue);
+  color: var(--text-light);
+  font-weight: 600;
+  padding: 14px 36px;
+  border-radius: 60px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(26, 58, 92, 0.3);
 }
 
 .footer {
   padding: 32px 0;
-  background: white;
-  border-top: 1px solid #e9edf2;
+  background: var(--primary-dark);
+  border-top: 3px solid var(--accent-gold);
   text-align: center;
-  color: #64748b;
+  color: #a0b4c8;
   font-size: 0.9rem;
 }
 
 .footer span {
-  color: #0b2b4a;
+  color: var(--accent-gold);
   font-weight: 600;
 }
 

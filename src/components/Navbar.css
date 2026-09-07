@@ -1,10 +1,10 @@
 .navbar {
   padding: 20px 0;
-  border-bottom: 1px solid #e9edf2;
-  background: white;
+  background: var(--primary-dark);
   position: sticky;
   top: 0;
   z-index: 10;
+  border-bottom: 3px solid var(--accent-gold);
 }
 
 .nav-content {
@@ -17,11 +17,11 @@
   font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: -0.5px;
-  color: #0b2b4a;
+  color: var(--text-light);
 }
 
 .logo span {
-  color: #d97706;
+  color: var(--accent-gold);
 }
 
 .nav-links {
@@ -34,26 +34,27 @@
 
 .nav-links a {
   text-decoration: none;
-  color: #334155;
+  color: #c8d6e5;
   font-size: 0.95rem;
-  transition: color 0.2s;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #d97706;
+  color: var(--accent-gold);
 }
 
 .nav-cta {
-  background: #0b2b4a;
-  color: white !important;
+  background: var(--accent-gold);
+  color: var(--text-dark) !important;
   padding: 8px 20px;
   border-radius: 40px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .nav-cta:hover {
-  background: #1a3f5e;
-  color: white !important;
+  background: var(--accent-gold-hover);
+  color: var(--text-dark) !important;
+  transform: translateY(-2px);
 }
 
 .mobile-menu-btn {
@@ -61,7 +62,7 @@
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: #0b2b4a;
+  color: var(--text-light);
   cursor: pointer;
   padding: 4px 8px;
 }
@@ -78,11 +79,11 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: white;
+    background: var(--primary-dark);
     padding: 20px 24px;
     gap: 16px;
-    border-bottom: 1px solid #e9edf2;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    border-bottom: 3px solid var(--accent-gold);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
   }
 
   .nav-links.active {
@@ -92,6 +93,7 @@
   .nav-links a {
     padding: 8px 0;
     width: 100%;
+    color: var(--text-light);
   }
 
   .nav-cta {

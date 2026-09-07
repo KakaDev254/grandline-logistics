@@ -5,6 +5,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     cargo: ''
   });
 
@@ -18,43 +19,66 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Thank you! We will contact you shortly.');
-    setFormData({ name: '', email: '', cargo: '' });
+    setFormData({ name: '', email: '', phone: '', cargo: '' });
   };
 
   return (
     <section className="contact" id="contact">
       <div className="container contact-grid">
         <div className="contact-info">
+          <span className="contact-tag">GET IN TOUCH TODAY</span>
           <h2>Let's move your cargo</h2>
           <p>Get in touch today for a quote or a consultation. We're ready to support your supply chain.</p>
           
           <div className="contact-detail">
             <i className="fas fa-phone-alt"></i>
-            <span>+254 716 311 139</span>
+            <div>
+              <span className="contact-label">Phone</span>
+              <span className="contact-value">+254 716 311 139</span>
+              <span className="contact-value">+254 742 134 377</span>
+            </div>
           </div>
+          
           <div className="contact-detail">
             <i className="fas fa-envelope"></i>
-            <span>info@grandlinelogistics.com</span>
+            <div>
+              <span className="contact-label">Email</span>
+              <span className="contact-value">info@qhl-ltd.com</span>
+            </div>
           </div>
+          
+          <div className="contact-detail">
+            <i className="fas fa-globe"></i>
+            <div>
+              <span className="contact-label">Website</span>
+              <span className="contact-value">www.qhl-ltd.com</span>
+            </div>
+          </div>
+          
           <div className="contact-detail">
             <i className="fas fa-location-dot"></i>
-            <span>Mombasa, Kenya</span>
+            <div>
+              <span className="contact-label">Location</span>
+              <span className="contact-value">Mombasa, Kenya</span>
+            </div>
           </div>
           
           <div className="social-links">
-            <a href="#" aria-label="TikTok"><i className="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
             <a href="#" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
+            <a href="#" aria-label="TikTok"><i className="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
           </div>
           
           <p className="social-handles">
-            <i className="fab fa-tiktok"></i> qhlgrandline · 
+            <i className="fab fa-instagram"></i> @qhglgrandline · 
             <i className="fab fa-linkedin-in"></i> grandline logistics limited
           </p>
         </div>
         
         <div className="quote-form">
           <h3>Request a quote</h3>
+          <p className="quote-sub">We'll respond within 24 hours</p>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Your Name</label>
@@ -79,6 +103,16 @@ const Contact = () => {
               />
             </div>
             <div className="form-group">
+              <label htmlFor="phone">Phone Number</label>
+              <input 
+                type="tel" 
+                id="phone" 
+                placeholder="+254 700 000 000" 
+                value={formData.phone}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
               <label htmlFor="cargo">Cargo Details</label>
               <textarea 
                 id="cargo" 
@@ -93,6 +127,7 @@ const Contact = () => {
             </button>
           </form>
           <p className="quote-phone">
+            <i className="fas fa-phone" style={{ color: 'var(--accent-gold)' }}></i>
             Prefer to talk? Call us directly on +254 716 311 139
           </p>
         </div>

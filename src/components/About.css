@@ -1,6 +1,6 @@
 .about {
   padding: 80px 0;
-  background: #f8fafc;
+  background: white;
 }
 
 .about-grid {
@@ -11,18 +11,53 @@
 }
 
 .about-image {
-  background: #e9edf2;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-blue) 100%);
   border-radius: 20px;
   height: 280px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%230b2b4a" opacity="0.1"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>');
-  background-size: 80px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid rgba(212, 168, 67, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-image::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(212, 168, 67, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.about-image-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.about-image-content i {
+  font-size: 3rem;
+  color: var(--accent-gold);
+  margin-bottom: 12px;
+}
+
+.about-image-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.about-image-content p {
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
 
 .about-tag {
-  color: #d97706;
+  color: var(--accent-gold);
   font-weight: 600;
   letter-spacing: 0.5px;
   display: inline-block;
@@ -32,7 +67,7 @@
 .about h2 {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #0b2b4a;
+  color: var(--primary-dark);
   letter-spacing: -1px;
   margin-bottom: 16px;
 }
@@ -43,17 +78,17 @@
 }
 
 .about-highlight {
-  background: white;
+  background: var(--bg-light);
   padding: 20px 24px;
   border-radius: 16px;
-  border-left: 4px solid #d97706;
+  border-left: 4px solid var(--accent-gold);
   margin-top: 20px;
 }
 
 .about-highlight p {
   margin: 0;
-  font-weight: 500;
-  color: #0b2b4a;
+  font-weight: 600;
+  color: var(--primary-dark);
 }
 
 @media (max-width: 768px) {

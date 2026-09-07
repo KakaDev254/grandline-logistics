@@ -43,7 +43,11 @@ const Hero = () => {
           </div>
         </div>
         <div className="hero-image">
-          <span className="hero-image-text">Global Logistics</span>
+          <div className="hero-image-content">
+            <i className="fas fa-ship" style={{ fontSize: '3rem', marginBottom: '12px', color: 'var(--accent-gold)' }}></i>
+            <span className="hero-image-text">QHL Grandline Logistics</span>
+            <span className="hero-image-sub">Global Logistics Solutions</span>
+          </div>
         </div>
       </div>
     </section>

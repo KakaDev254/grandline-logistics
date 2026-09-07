@@ -5,7 +5,13 @@ const About = () => {
   return (
     <section className="about" id="about">
       <div className="container about-grid">
-        <div className="about-image"></div>
+        <div className="about-image">
+          <div className="about-image-content">
+            <i className="fas fa-ship"></i>
+            <h3>QHL Grandline Logistics</h3>
+            <p>Reliable Service. On Time. Every Time.</p>
+          </div>
+        </div>
         <div>
           <span className="about-tag">ABOUT GRANDLINE</span>
           <h2>Reliable service. On time. Every time.</h2>
@@ -20,8 +26,8 @@ const About = () => {
           </p>
           <div className="about-highlight">
             <p>
-              <i className="fas fa-arrow-right" style={{ color: '#d97706', marginRight: '12px' }}></i>
-              Let's move forward together.
+              <i className="fas fa-arrow-right" style={{ color: 'var(--accent-gold)', marginRight: '12px' }}></i>
+              Let's move forward together this September.
             </p>
           </div>
         </div>
