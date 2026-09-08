@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Hero.css';
-
-// You can replace this with your own image URL
-const heroBackgroundImage = 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80';
+// Import your local image
+import heroBg from '../assets/hero-bg.jpg'; // Change this to your actual image name
 
 const Hero = () => {
   const [offset, setOffset] = useState(0);
@@ -25,66 +24,56 @@ const Hero = () => {
       <div 
         className="hero-background"
         style={{
-          backgroundImage: `url(${heroBackgroundImage})`,
+          backgroundImage: `url(${heroBg})`,
           transform: `translateY(${offset * 0.5}px) scale(1.1)`,
         }}
       />
       
-      {/* Dark Overlay for better text readability */}
+      {/* Dark Overlay */}
       <div className="hero-overlay"></div>
 
       <div className="container hero-grid">
         <div className="hero-content">
+          {/* Top Navigation Links */}
+          <div className="hero-nav">
+            <span className="brand">GRANDLINE LOGISTICS</span>
+            <div className="nav-links">
+              <a href="#services">SERVICES</a>
+              <a href="#about">ABOUT</a>
+              <a href="#why">WHY US</a>
+              <a href="#contact">CONTACT</a>
+              <a href="#contact" className="nav-quote">GET A QUOTE</a>
+            </div>
+          </div>
+
+          {/* Badge */}
           <div className="hero-badge">
             <i className="fas fa-ship" style={{ marginRight: '8px' }}></i> 
-            Fast Clearance. Reliable Delivery.
+            FAST CLEARANCE. RELIABLE DELIVERY.
           </div>
-          <h1>
-            Your cargo.<br />
-            <span className="highlight">Our priority.</span><br />
-            Your success.
-          </h1>
-          <p>
-            Grandline Logistics Limited moves freight by sea, air and road — clearing customs, 
-            storing goods and delivering on time, every time.
-          </p>
-          <div className="hero-buttons">
-            <a href="#contact" className="btn-primary">Start Shipping</a>
-            <a href="#services" className="btn-outline">Explore Services</a>
-          </div>
-          <div className="hero-stats">
-            <div className="stat-item">
-              <span className="stat-number">12+</span>
-              <span className="stat-label">Years moving cargo</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">40+</span>
-              <span className="stat-label">Global partners</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">5</span>
-              <span className="stat-label">Core service lines</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">24/7</span>
-              <span className="stat-label">Client support</span>
-            </div>
-          </div>
-        </div>
-        <div className="hero-image">
-          <div className="hero-image-content">
-            <i className="fas fa-ship" style={{ fontSize: '3rem', marginBottom: '12px', color: 'var(--accent-gold)' }}></i>
-            <span className="hero-image-text">QHL Grandline Logistics</span>
-            <span className="hero-image-sub">Global Logistics Solutions</span>
-          </div>
-        </div>
-      </div>
 
-      {/* Scroll indicator */}
-      <div className="scroll-indicator">
-        <span>Scroll to explore</span>
-        <div className="mouse">
-          <div className="wheel"></div>
+          {/* Main Heading */}
+          <h1>
+            YOUR CARGO.<br />
+            <span className="highlight">OUR PRIORITY.</span><br />
+            YOUR SUCCESS.
+          </h1>
+
+          {/* Description */}
+          <p>
+            Grandline Logistics Limited moves freight by sea, air and road — 
+            clearing customs, storing goods and delivering on time, every time.
+          </p>
+
+          {/* CTA Button */}
+          <div className="hero-buttons">
+            <a href="#contact" className="btn-primary">REQUEST A QUOTE</a>
+          </div>
+
+          {/* Services Label */}
+          <div className="hero-services-label">
+            <span>OUR SERVICES</span>
+          </div>
         </div>
       </div>
     </section>
