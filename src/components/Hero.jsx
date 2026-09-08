@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './Hero.css';
-// Import your local image
 import heroBg from '../assets/hero-bg.jpg';
 
 const Hero = () => {
@@ -20,7 +19,7 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      {/* Parallax Background Image */}
+      {/* Parallax Background */}
       <div 
         className="hero-background"
         style={{
@@ -29,34 +28,69 @@ const Hero = () => {
         }}
       />
       
-      {/* Darker Overlay for better text visibility */}
       <div className="hero-overlay"></div>
 
       <div className="container hero-grid">
         <div className="hero-content">
-          {/* Main Heading */}
-          <h1>
-            YOUR CARGO.<br />
-            <span className="highlight">OUR PRIORITY.</span><br />
-            YOUR SUCCESS.
-          </h1>
-
-          {/* Description */}
-          <p>
-            Grandline Logistics Limited moves freight by sea, air and road — 
-            clearing customs, storing goods and delivering on time, every time.
-          </p>
-
-          {/* CTA Button */}
-          <div className="hero-buttons">
-            <a href="#contact" className="btn-primary">REQUEST A QUOTE</a>
+          {/* Top left badge */}
+          <div className="hero-badge">
+            <span className="badge-dot"></span>
+            TRUSTED LOGISTICS PARTNER
           </div>
 
-          {/* Services Label - Clickable */}
-          <a href="#services" className="hero-services-label">
-            <span>OUR SERVICES</span>
-            <i className="fas fa-arrow-down"></i>
-          </a>
+          {/* Main heading with decorative line */}
+          <div className="hero-heading-wrapper">
+            <div className="heading-line"></div>
+            <h1>
+              <span className="text-light">YOUR CARGO,</span>
+              <span className="text-highlight">OUR PRIORITY</span>
+              <span className="text-light">YOUR SUCCESS</span>
+            </h1>
+          </div>
+
+          {/* Description */}
+          <p className="hero-description">
+            Grandline Logistics delivers freight by sea, air and road — 
+            with seamless customs clearance, secure warehousing, 
+            and on-time delivery across the globe.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="hero-actions">
+            <a href="#contact" className="btn-primary">
+              GET STARTED
+              <svg className="btn-arrow" viewBox="0 0 24 24">
+                <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
+              </svg>
+            </a>
+            <a href="#services" className="btn-secondary">
+              EXPLORE SERVICES
+            </a>
+          </div>
+
+          {/* Trust indicators */}
+          <div className="hero-trust">
+            <div className="trust-item">
+              <span className="trust-number">12+</span>
+              <span className="trust-label">Years of Excellence</span>
+            </div>
+            <div className="trust-divider"></div>
+            <div className="trust-item">
+              <span className="trust-number">40+</span>
+              <span className="trust-label">Global Partners</span>
+            </div>
+            <div className="trust-divider"></div>
+            <div className="trust-item">
+              <span className="trust-number">24/7</span>
+              <span className="trust-label">Client Support</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="scroll-indicator">
+          <span>SCROLL</span>
+          <div className="scroll-line"></div>
         </div>
       </div>
     </section>
