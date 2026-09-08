@@ -34,18 +34,6 @@ const Hero = () => {
 
       <div className="container hero-grid">
         <div className="hero-content">
-          {/* Top Navigation Links */}
-          <div className="hero-nav">
-            <span className="brand">GRANDLINE LOGISTICS</span>
-            <div className="nav-links">
-              <a href="#services">SERVICES</a>
-              <a href="#about">ABOUT</a>
-              <a href="#why">WHY US</a>
-              <a href="#contact">CONTACT</a>
-              <a href="#contact" className="nav-quote">GET A QUOTE</a>
-            </div>
-          </div>
-
           {/* Badge */}
           <div className="hero-badge">
             <i className="fas fa-ship" style={{ marginRight: '8px' }}></i> 
