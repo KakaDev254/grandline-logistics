@@ -2,28 +2,31 @@ import React, { useState } from 'react';
 import './Navbar.css';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="navbar">
-      <div className="container nav-content">
-        <div className="logo">
-          Grandline<span>Logistics</span>
-        </div>
-        
+      <div className="container nav-container">
+        <a href="/" className="nav-logo">
+          GRANDLINE <span>LOGISTICS</span>
+        </a>
+
         <button 
-          className="mobile-menu-btn"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className={`nav-hamburger ${isOpen ? 'active' : ''}`}
+          onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
 
-        <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-          <li><a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a></li>
-          <li><a href="#about" onClick={() => setIsMenuOpen(false)}>About</a></li>
-          <li><a href="#why" onClick={() => setIsMenuOpen(false)}>Why Us</a></li>
-          <li><a href="#contact" className="nav-cta" onClick={() => setIsMenuOpen(false)}>Get Quote</a></li>
+        <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
+          <li><a href="#services" onClick={() => setIsOpen(false)}>Services</a></li>
+          <li><a href="#about" onClick={() => setIsOpen(false)}>About</a></li>
+          <li><a href="#why" onClick={() => setIsOpen(false)}>Why Us</a></li>
+          <li><a href="#contact" onClick={() => setIsOpen(false)}>Contact</a></li>
+          <li><a href="#contact" className="nav-btn" onClick={() => setIsOpen(false)}>Get a Quote</a></li>
         </ul>
       </div>
     </nav>
