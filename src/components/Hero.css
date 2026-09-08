@@ -1,3 +1,8 @@
+/* ======================== */
+/* GOOGLE FONTS - Sleek */
+/* ======================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
 .hero {
   padding: 80px 0 60px;
   position: relative;
@@ -7,7 +12,9 @@
   align-items: center;
 }
 
-/* Parallax Background Image */
+/* ======================== */
+/* PARALLAX BACKGROUND */
+/* ======================== */
 .hero-background {
   position: absolute;
   top: -10%;
@@ -21,7 +28,9 @@
   z-index: 0;
 }
 
-/* Dark Overlay - Blue tones */
+/* ======================== */
+/* DARKER OVERLAY - Better text visibility */
+/* ======================== */
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -30,14 +39,16 @@
   bottom: 0;
   background: linear-gradient(
     135deg,
-    rgba(10, 26, 43, 0.88) 0%,
-    rgba(26, 58, 92, 0.75) 50%,
-    rgba(10, 26, 43, 0.88) 100%
+    rgba(10, 26, 43, 0.85) 0%,
+    rgba(26, 58, 92, 0.7) 50%,
+    rgba(10, 26, 43, 0.85) 100%
   );
   z-index: 1;
 }
 
-/* Hero Grid */
+/* ======================== */
+/* CONTENT */
+/* ======================== */
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -50,106 +61,121 @@
 
 .hero-content {
   width: 100%;
-  max-width: 800px;
-  text-align: left; /* Left aligned */
+  max-width: 750px;
+  text-align: left;
 }
 
-/* Badge - Red accent */
-.hero-badge {
-  display: inline-block;
-  background: rgba(204, 0, 0, 0.12);
-  padding: 8px 20px;
-  border-radius: 0; /* Sharp corners */
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #ff4444;
-  margin-bottom: 30px;
-  letter-spacing: 1.5px;
-  border: 1px solid rgba(204, 0, 0, 0.2);
-  animation: fadeInDown 0.8s ease-out;
-}
-
-/* Main Heading */
+/* ======================== */
+/* HEADING - Reduced font size */
+/* ======================== */
 .hero h1 {
-  font-size: 5rem;
+  font-size: 3.8rem;
   font-weight: 800;
   line-height: 1.08;
-  letter-spacing: 2px;
-  color: var(--text-light);
-  margin-bottom: 25px;
-  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.3);
-  animation: fadeInUp 0.8s ease-out 0.2s both;
+  letter-spacing: -0.5px;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
+  font-family: 'Inter', sans-serif;
 }
 
+/* "OUR PRIORITY" in BLUE */
 .hero h1 .highlight {
-  color: #ff2222; /* Bright red */
+  color: #4a8db7;
   position: relative;
 }
 
-/* Description */
+/* ======================== */
+/* DESCRIPTION - Clean */
+/* ======================== */
 .hero p {
-  font-size: 1.15rem;
-  color: #c8d6e5;
-  max-width: 600px;
-  margin-bottom: 35px;
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 520px;
+  margin-bottom: 32px;
   line-height: 1.8;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  animation: fadeInUp 0.8s ease-out 0.4s both;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.2px;
 }
 
-/* CTA Buttons - Sharp corners */
+/* ======================== */
+/* CTA BUTTON - Sleek */
+/* ======================== */
 .hero-buttons {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 50px;
-  animation: fadeInUp 0.8s ease-out 0.6s both;
+  margin-bottom: 40px;
 }
 
 .btn-primary {
   display: inline-block;
-  background: var(--accent-red);
-  color: var(--text-light);
-  font-weight: 700;
-  padding: 16px 48px;
-  text-decoration: none;
-  font-size: 0.95rem;
+  background: #cc0000;
+  color: white;
+  font-weight: 600;
+  padding: 14px 40px;
+  font-size: 0.85rem;
   letter-spacing: 1.5px;
+  text-decoration: none;
+  text-transform: uppercase;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
-  text-transform: uppercase;
-  border-radius: 0; /* Sharp corners */
+  border-radius: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 .btn-primary:hover {
-  background: var(--accent-red-hover);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 40px rgba(204, 0, 0, 0.35);
+  background: #b30000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(204, 0, 0, 0.3);
 }
 
-/* Services Label */
+/* ======================== */
+/* SERVICES LABEL - Clickable */
+/* ======================== */
 .hero-services-label {
-  margin-top: 10px;
-  padding-top: 25px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  animation: fadeInUp 0.8s ease-out 0.8s both;
-}
-
-.hero-services-label span {
-  color: rgba(255, 255, 255, 0.35);
-  font-size: 0.75rem;
-  letter-spacing: 4px;
-  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  font-weight: 500;
+  text-decoration: none;
   text-transform: uppercase;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  border: none;
+  background: none;
 }
 
-/* Animations */
+.hero-services-label:hover {
+  color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+}
+
+.hero-services-label i {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.hero-services-label:hover i {
+  transform: translateY(4px);
+}
+
+/* ======================== */
+/* ANIMATIONS */
+/* ======================== */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -157,21 +183,28 @@
   }
 }
 
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.hero h1 {
+  animation: fadeInUp 0.6s ease-out 0.1s both;
 }
 
-/* Responsive */
+.hero p {
+  animation: fadeInUp 0.6s ease-out 0.25s both;
+}
+
+.hero-buttons {
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.hero-services-label {
+  animation: fadeInUp 0.6s ease-out 0.55s both;
+}
+
+/* ======================== */
+/* RESPONSIVE */
+/* ======================== */
 @media (max-width: 1024px) {
   .hero h1 {
-    font-size: 4rem;
+    font-size: 3.2rem;
   }
 }
 
@@ -179,24 +212,31 @@
   .hero {
     padding: 60px 0 40px;
     min-height: auto;
+    text-align: center;
   }
   
   .hero-content {
     max-width: 100%;
-    text-align: left;
+    text-align: center;
   }
   
   .hero h1 {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
   
   .hero p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .hero-buttons {
-    justify-content: flex-start;
+    justify-content: center;
+  }
+  
+  .hero-services-label {
+    justify-content: center;
   }
   
   .hero-background {
@@ -210,22 +250,17 @@
   }
   
   .hero h1 {
-    font-size: 2.2rem;
-    letter-spacing: 1px;
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
   }
   
   .hero p {
-    font-size: 0.9rem;
-  }
-  
-  .hero-badge {
-    font-size: 0.65rem;
-    padding: 6px 14px;
+    font-size: 0.85rem;
   }
   
   .btn-primary {
-    padding: 14px 32px;
-    font-size: 0.85rem;
+    padding: 12px 28px;
+    font-size: 0.75rem;
     width: 100%;
     text-align: center;
   }
@@ -234,8 +269,8 @@
     width: 100%;
   }
   
-  .hero-services-label span {
-    font-size: 0.65rem;
-    letter-spacing: 3px;
+  .hero-services-label {
+    font-size: 0.6rem;
+    letter-spacing: 2px;
   }
 }

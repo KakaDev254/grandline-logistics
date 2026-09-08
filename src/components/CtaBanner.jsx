@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './CtaBanner.css';
+import ctaBg from '../assets/cta-bg.jpg';
 
 const CtaBanner = () => {
   const [offset, setOffset] = useState(0);
@@ -18,25 +19,25 @@ const CtaBanner = () => {
 
   return (
     <section className="cta-banner">
-      {/* Parallax Background */}
+      {/* Background with imported image */}
       <div 
-        className="cta-background"
+        className="cta-bg"
         style={{
-          backgroundImage: "url('/cta-bg.jpg')",
+          backgroundImage: `url(${ctaBg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           transform: `translateY(${offset * 0.4}px) scale(1.1)`,
         }}
       />
       
-      {/* Dark Overlay */}
+      {/* Lighter Overlay */}
       <div className="cta-overlay"></div>
 
       <div className="container cta-content">
         <h2>
           NEW MONTH. NEW<br />
           <span className="highlight">OPPORTUNITIES.</span><br />
-          <span className="highlight">STRONGER PARTNERSHIPS</span>
+          STRONGER PARTNERSHIPS
         </h2>
         <p>
           We renew our commitment to delivering world-class logistics solutions that help your

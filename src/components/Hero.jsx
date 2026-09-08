@@ -29,17 +29,11 @@ const Hero = () => {
         }}
       />
       
-      {/* Dark Overlay */}
+      {/* Darker Overlay for better text visibility */}
       <div className="hero-overlay"></div>
 
       <div className="container hero-grid">
         <div className="hero-content">
-          {/* Badge */}
-          <div className="hero-badge">
-            <i className="fas fa-ship" style={{ marginRight: '8px' }}></i> 
-            FAST CLEARANCE. RELIABLE DELIVERY.
-          </div>
-
           {/* Main Heading */}
           <h1>
             YOUR CARGO.<br />
@@ -53,15 +47,16 @@ const Hero = () => {
             clearing customs, storing goods and delivering on time, every time.
           </p>
 
-          {/* CTA Button - Sharp corners */}
+          {/* CTA Button */}
           <div className="hero-buttons">
             <a href="#contact" className="btn-primary">REQUEST A QUOTE</a>
           </div>
 
-          {/* Services Label */}
-          <div className="hero-services-label">
+          {/* Services Label - Clickable */}
+          <a href="#services" className="hero-services-label">
             <span>OUR SERVICES</span>
-          </div>
+            <i className="fas fa-arrow-down"></i>
+          </a>
         </div>
       </div>
     </section>
