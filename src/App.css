@@ -126,3 +126,20 @@
     text-align: center;
   }
 }
+/* Smooth scroll for better parallax */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Add a subtle gradient transition */
+.hero {
+  transition: background 0.3s ease;
+}
+
+/* Improve performance */
+.parallax-layer,
+.hero-content,
+.hero-image {
+  will-change: transform;
+  backface-visibility: hidden;
+}

@@ -1,11 +1,66 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Hero.css';
 
 const Hero = () => {
+  const [scrollY, setScrollY] = useState(0);
+  const heroRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  // Calculate parallax offsets
+  const parallaxOffset = scrollY * 0.5;
+  const parallaxOffsetFast = scrollY * 0.8;
+  const parallaxOffsetSlow = scrollY * 0.2;
+
   return (
-    <section className="hero">
+    <section className="hero" ref={heroRef}>
+      {/* Parallax Background Layers */}
+      <div 
+        className="parallax-layer layer-1"
+        style={{ transform: `translateY(${parallaxOffsetSlow}px)` }}
+      />
+      <div 
+        className="parallax-layer layer-2"
+        style={{ transform: `translateY(${parallaxOffset}px)` }}
+      />
+      <div 
+        className="parallax-layer layer-3"
+        style={{ transform: `translateY(${parallaxOffsetFast}px)` }}
+      />
+      
+      {/* Floating particles */}
+      <div className="particles-container">
+        {[...Array(20)].map((_, i) => (
+          <div 
+            key={i}
+            className={`particle particle-${i % 3}`}
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${5 + Math.random() * 10}s`,
+              width: `${2 + Math.random() * 6}px`,
+              height: `${2 + Math.random() * 6}px`,
+            }}
+          />
+        ))}
+      </div>
+
       <div className="container hero-grid">
-        <div className="hero-content">
+        <div 
+          className="hero-content"
+          style={{ transform: `translateY(${parallaxOffset * 0.1}px)` }}
+        >
           <div className="hero-badge">
             <i className="fas fa-ship" style={{ marginRight: '8px' }}></i> 
             Fast Clearance. Reliable Delivery.
@@ -42,12 +97,23 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="hero-image">
+        <div 
+          className="hero-image"
+          style={{ transform: `translateY(${parallaxOffset * 0.15}px)` }}
+        >
           <div className="hero-image-content">
             <i className="fas fa-ship" style={{ fontSize: '3rem', marginBottom: '12px', color: 'var(--accent-gold)' }}></i>
             <span className="hero-image-text">QHL Grandline Logistics</span>
             <span className="hero-image-sub">Global Logistics Solutions</span>
           </div>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="scroll-indicator">
+        <span>Scroll to explore</span>
+        <div className="mouse">
+          <div className="wheel"></div>
         </div>
       </div>
     </section>
