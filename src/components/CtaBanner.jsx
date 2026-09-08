@@ -1,27 +1,48 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './CtaBanner.css';
 
 const CtaBanner = () => {
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setOffset(window.pageYOffset);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <section className="cta-banner">
-      <div className="container">
-        <div className="cta-badge">NEW MONTH. NEW OPPORTUNITIES.</div>
+      {/* Parallax Background */}
+      <div 
+        className="cta-background"
+        style={{
+          backgroundImage: "url('/cta-bg.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          transform: `translateY(${offset * 0.4}px) scale(1.1)`,
+        }}
+      />
+      
+      {/* Dark Overlay */}
+      <div className="cta-overlay"></div>
+
+      <div className="container cta-content">
         <h2>
-          Stronger Partnerships!
+          NEW MONTH. NEW<br />
+          <span className="highlight">OPPORTUNITIES.</span><br />
+          <span className="highlight">STRONGER PARTNERSHIPS</span>
         </h2>
         <p>
-          Happy New Month! As we step into September, we renew our commitment to 
-          delivering world-class logistics solutions that help your business grow.
-          <br />
-          <span style={{ color: 'var(--accent-gold)', fontWeight: '700' }}>
-            Let's achieve more together!
-          </span>
+          We renew our commitment to delivering world-class logistics solutions that help your
+          business grow.
         </p>
-        <div className="cta-tagline">
-          <span>YOUR CARGO. OUR PRIORITY.</span>
-          <span className="highlight">YOUR SUCCESS.</span>
-        </div>
-        <a href="#contact" className="btn-primary">Get Started Today</a>
+        <a href="#contact" className="cta-btn">START SHIPPING</a>
       </div>
     </section>
   );

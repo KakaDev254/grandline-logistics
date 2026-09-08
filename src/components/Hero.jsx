@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Hero.css';
 // Import your local image
-import heroBg from '../assets/hero-bg.jpg'; // Change this to your actual image name
+import heroBg from '../assets/hero-bg.jpg';
 
 const Hero = () => {
   const [offset, setOffset] = useState(0);
@@ -53,7 +53,7 @@ const Hero = () => {
             clearing customs, storing goods and delivering on time, every time.
           </p>
 
-          {/* CTA Button */}
+          {/* CTA Button - Sharp corners */}
           <div className="hero-buttons">
             <a href="#contact" className="btn-primary">REQUEST A QUOTE</a>
           </div>
